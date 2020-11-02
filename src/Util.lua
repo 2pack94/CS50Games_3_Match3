@@ -26,7 +26,7 @@ function GenerateTileQuads(atlas)
         -- there are 2 times TILE_NUM_COLORS / 2 rows next to each other in the spritesheet
         for i = 1, 2 do
             tiles[counter] = {}
-            -- the columns hold the different tile varietes of the tile colors
+            -- the columns hold the different tile varieties of the tile colors
             for col = 1, TILE_NUM_VARIETIES do
                 table.insert(tiles[counter], 
                     love.graphics.newQuad(x, y, TILE_SIZE, TILE_SIZE, atlas:getDimensions())

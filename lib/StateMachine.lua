@@ -6,7 +6,7 @@
 -- -- States are only created as need, to save memory, reduce clean-up bugs and increase speed
 -- -- due to garbage collection taking longer with more data in memory.
 -- --
--- -- States are added with a string identifier and an intialisation function.
+-- -- States are added with a string identifier and an initialization function.
 -- -- It is expect the init function, when called, will return a table with
 -- -- Render, Update, Enter and Exit methods.
 --

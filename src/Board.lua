@@ -171,7 +171,7 @@ function Board:calculateMatches()
             end
             -- match streak ends: if current tile doesn't match color of last tile or if empty tile or if at the end of the row (all three can be true at once)
             if cur_color ~= prev_color or cur_color == 0 or x == self.num_tiles_per_dimension then
-                -- if a match occured, store the tiles that belong to the match in a table
+                -- if a match occurred, store the tiles that belong to the match in a table
                 if match_num >= self.tiles_to_match then
                     -- table that holds every tile of the current match
                     local match = {}
@@ -218,7 +218,7 @@ function Board:calculateMatches()
             end
             -- match streak ends: if current tile doesn't match color of last tile or if empty tile or if at the end of the column (all three can be true at once)
             if cur_color ~= prev_color or cur_color == 0 or y == self.num_tiles_per_dimension then
-                -- if a match occured, store the tiles that belong to the match in a table
+                -- if a match occurred, store the tiles that belong to the match in a table
                 if match_num >= self.tiles_to_match then
                     -- table that holds every tile of the current match
                     local match = {}
@@ -346,7 +346,7 @@ end
 --[[
     check if there is a potential match that can be made by swapping two tiles on the board
     performs all possible tile swaps and checks if a match occurred after each swap.
-    when traversing self.tiles, the current tile only needs to be swapped with its right and bottom neighbour to make all possible swap combinations
+    when traversing self.tiles, the current tile only needs to be swapped with its right and bottom neighbor to make all possible swap combinations
     return: true if there is a potential match, false otherwise
 ]]
 function Board:isPotentialMatch()

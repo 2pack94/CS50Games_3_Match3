@@ -150,7 +150,7 @@ function PlayState:processInput()
             self.board:swapTilesLogically(selected_tile, self.highlighted_tile)
 
             -- the following tweens need to finish before this point is entered again
-            -- disable input to protect them or else this would result in buggy behaviour
+            -- disable input to protect them or else this would result in buggy behavior
             self.allow_input = false
 
             -- if match occurs after swapping
