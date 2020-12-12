@@ -18,7 +18,7 @@ function GameOverState:enter(params)
 end
 
 function GameOverState:update(dt)
-    if keyboardWasPressed('enter') or keyboardWasPressed('return') or keyboardWasPressed('escape') then
+    if keyboardWasPressed('return') or keyboardWasPressed('escape') then
         gStateMachine:change('start')
     end
 end

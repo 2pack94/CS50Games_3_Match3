@@ -84,7 +84,7 @@ function StartState:update(dt)
     end
 
     -- switch to another state with one of the menu options
-    if keyboardWasPressed('enter') or keyboardWasPressed('return') then
+    if keyboardWasPressed('return') then
         if self.current_menu_item == 0 then     -- start game
             -- tween (interpolate a value over a period of time), using Timer (in knife/timer.lua).
             -- transition rect's alpha to 1, then transition to the BeginGame state after the animation is over

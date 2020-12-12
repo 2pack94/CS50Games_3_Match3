@@ -121,7 +121,7 @@ function PlayState:processInput()
     end
 
     -- if pressed enter or left mouse, to select, deselect or swap a tile
-    if self.allow_input and (keyboardWasPressed('enter') or keyboardWasPressed('return') or mouse[1]) then
+    if self.allow_input and (keyboardWasPressed('return') or mouse[1]) then
         local selected_tile = self.board.tiles[self.board_cursor_y][self.board_cursor_x]
         if not selected_tile then   -- support for empty spaces (but don't support interaction)
             return

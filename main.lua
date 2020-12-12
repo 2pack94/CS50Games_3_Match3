@@ -90,7 +90,7 @@ end
 
 function love.keypressed(key)
     -- toggle fullscreen mode by pressing left alt + enter
-    if love.keyboard.isDown('lalt') and (key == 'enter' or key == 'return') then
+    if love.keyboard.isDown('lalt') and key == 'return' then
         push:switchFullscreen()
         return      -- don't use this keypress for the game logic
     end
