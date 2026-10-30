@@ -100,11 +100,13 @@ end
 
 -- callback for mouse buttons. gives the x and y of the mouse, as well as the button.
 function love.mousepressed(x, y, button)
-    buttons_pressed[button] = true
-    -- convert to virtual resolution coordinates
+    -- convert to virtual resolution coordinates (can return nil when resizing the window)
     x, y = push:toGame(x, y)
-    buttons_pressed['x'] = x
-    buttons_pressed['y'] = y
+    if x ~= nil and y ~= nil then
+        buttons_pressed[button] = true
+        buttons_pressed['x'] = x
+        buttons_pressed['y'] = y
+    end
 end
 
 function keyboardWasPressed(key)
